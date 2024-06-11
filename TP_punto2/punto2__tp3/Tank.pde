@@ -1,19 +1,19 @@
-class Snake{
-public PImage cabeza;
+class Tank{
+public PImage tanky;
 private PVector  velocidad;
 private int puntaje;
 private int deltaTime ;
 private PVector posicion;
 
 //constructor
-public Snake(){
+public Tank(){
 
-   cabeza =loadImage("snaky.png");
+   tanky =loadImage("tank.png");
 }
 
  public void dibujar(){
    
-    image(cabeza,posicion.x,posicion.y);
+    image(tanky,posicion.x,posicion.y,50,50);
  //  fill(0,100,255);
    //rect(20,20,20,20);
  }
@@ -27,12 +27,9 @@ public Snake(){
    if(direccion==1){
  this.posicion.x-=this.velocidad.x;
    }
-   if (direccion==2){
-  this.posicion.y+=this.velocidad.y;
-   }
-   if(direccion==3){
- this.posicion.y-=this.velocidad.y;
-   }
+   
+   
+  
    
  }
  //metodo accesor
