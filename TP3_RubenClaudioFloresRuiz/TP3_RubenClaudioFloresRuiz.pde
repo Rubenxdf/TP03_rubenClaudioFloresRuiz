@@ -4,8 +4,8 @@ void setup(){
   //costructor
   snake=new Snake();
   //crea las posiciones de snake  en x,y,hace referencia asu clase snake con posicion
-  snake.posicion = new PVector(width/2,height/2);
-
+  snake.setPosicion(new PVector(width/2,height/2));
+snake.setVelocidad( new PVector(10,10));
   
   
 }
@@ -16,9 +16,15 @@ void draw(){
 
   public void keyPressed(){
   if(key=='d'){
-    snake.posicion.x+=10;
+    snake.mover(0);
   }
    if(key=='a'){
-    snake.posicion.x-=10;
+ snake.mover(1);
+  }
+  if(key=='s'){
+    snake.mover(2);
+  }
+   if(key=='w'){
+ snake.mover(3);
   }
   }
