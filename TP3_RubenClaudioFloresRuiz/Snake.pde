@@ -10,6 +10,12 @@ public Snake(){
 
    cabeza =loadImage("snaky.png");
 }
+//para usar con collliders
+/*
+public Snake(PVector posicion){
+  this.posicion=posicion;
+}*/
+
 
  public void dibujar(){
    

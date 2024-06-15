@@ -1,3 +1,4 @@
+ArrayList<Projectile> projectiles;
 Tank tank;
 Muro roca;
 void setup(){
@@ -9,6 +10,8 @@ void setup(){
 tank.setVelocidad( new PVector(10,10));
  roca=new Muro();
  roca.setPosicion(new PVector());
+ //proyectiles
+  projectiles = new ArrayList<Projectile>();
   
   
 }
@@ -26,5 +29,11 @@ void draw(){
    if(key=='a'){
  tank.mover(1);
   }
-
+if (key == ' ') {
+    // Disparar un proyectil
+  //original
+  //projectiles.add(new Projectile(rectX + rectWidth / 2, rectY));
+    // projectiles.add(new Projectile( posicion.x+posicion.y));
+  
+  }
   }
