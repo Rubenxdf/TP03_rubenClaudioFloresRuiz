@@ -1,4 +1,7 @@
 PImage imagen;
+int framesPorSegundo;
+float deltaTime;
+private ArrayList<Projectile> balas;
 //float DeltaTime;
 Tank tank;
 Muro roca;
@@ -14,13 +17,20 @@ imagen = loadImage("terreno.jpg");
 tank.setVelocidad( new PVector(10,10));
  roca=new Muro();
  roca.setPosicion(new PVector());
+ //constructor projectiles con una array list
+ 
+   balas = new ArrayList<Projectile>();
  //proyectiles
- // projectiles = new ArrayList<Projectile>();
+ 
   
-  
+    //Establecer el frameRate a 60 FPS
+frameRate(60); 
 }
 void draw(){
     image(imagen, 0, 0);
+    //DELTATIME
+      framesPorSegundo = round(frameRate); // dado que en Processing los FPS se estabilizan luego de los primeros segundos
+    deltaTime = 1.0/framesPorSegundo;
  // terreno.dibujar();
  
   tank.dibujar();
@@ -42,4 +52,5 @@ if (key == ' ') {
     // projectiles.add(new Projectile( posicion.x+posicion.y));
   
   }
+  
   }
