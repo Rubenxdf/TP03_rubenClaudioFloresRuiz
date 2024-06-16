@@ -1,8 +1,12 @@
-ArrayList<Projectile> projectiles;
+PImage imagen;
+//float DeltaTime;
 Tank tank;
 Muro roca;
+//Fondo terreno;
 void setup(){
   size (600,600);
+imagen = loadImage("terreno.jpg");
+  imagen.resize(width, height);
   //costructor
   tank=new Tank();
   //crea las posiciones de snake  en x,y,hace referencia asu clase snake con posicion
@@ -11,12 +15,14 @@ tank.setVelocidad( new PVector(10,10));
  roca=new Muro();
  roca.setPosicion(new PVector());
  //proyectiles
-  projectiles = new ArrayList<Projectile>();
+ // projectiles = new ArrayList<Projectile>();
   
   
 }
 void draw(){
-  background(0);
+    image(imagen, 0, 0);
+ // terreno.dibujar();
+ 
   tank.dibujar();
   roca.dibujar();
   roca.dibujar();

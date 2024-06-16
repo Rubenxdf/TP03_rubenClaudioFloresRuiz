@@ -13,7 +13,7 @@ public Tank(){
 
  public void dibujar(){
    
-    image(tanky,posicion.x,posicion.y,50,50);
+    image(tanky,posicion.x,posicion.y,70,70);
  //  fill(0,100,255);
    //rect(20,20,20,20);
  }
