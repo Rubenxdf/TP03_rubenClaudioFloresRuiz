@@ -1,24 +1,19 @@
 class Projectile {
-  float x, y;
-  float speed = 10;
+ private PVector posicion;
+  private float velocidad;
   float width = 5;
   float height = 10;
   
-  Projectile(float startX, float startY) {
-    x = startX;
-    y = startY;
+  Projectile(float x, float y) {
+   this.posicion = new PVector(x, y);
+    this.velocidad = 200;
   }
   
-  void update() {
-    y -= speed;
+ public void mover(float deltaTime) {
+    posicion.y -= velocidad * deltaTime;
   }
-  //dibujar al proyectil
-  void display() {
-    fill(0);
-    rect(x, y, width, height);
-  }
-  
-  boolean isOffScreen() {
-    return y < 0;
+  //dibujar al proyectil en pos Y
+public void dibujar() {
+    ellipse(posicion.x, posicion.y, 5, 5);
   }
 }
